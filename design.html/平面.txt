@@ -1,0 +1,50 @@
+!DOCTYPE html
+html lang=zh-CN
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    title平面 - Onedidititle
+    style
+        {margin0;padding0;box-sizingborder-box}
+        body{font-family-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background#111;color#fff;overflow-xhidden}
+        bodybefore{content'';positionfixed;top0;left0;width100%;height100%;backgroundradial-gradient(circle at 50% 50%,#222 0%,#111 70%);animationbgFloat 16s ease-in-out infinite;opacity0.4;z-index-1}
+        @keyframes bgFloat{0%,100%{transformscale(1) translate(0,0)}50%{transformscale(1.08) translate(1%,-1%)}}
+        
+        nav{positionfixed;top0;width100%;padding1.2rem 3rem;backgroundtransparent;displayflex;align-itemscenter;justify-contentspace-between;z-index100}
+        .logo-img{height28px;transitionall 0.3s}
+        .logo-imghover{transformscale(1.12);filterbrightness(0) saturate(100%) invert(77%) sepia(100%) saturate(500%) hue-rotate(10deg)}
+        .nav-menu{displayflex;gap2.2rem;positionabsolute;left50%;transformtranslateX(-50%)}
+        .nav-menu a{color#aaa;font-size14px;text-decorationnone;transitionall 0.25s}
+        .nav-menu ahover{color#fff;transformscale(1.08)}
+
+        .page-title{max-width1000px;margin140px auto 30px;padding0 2rem;font-size28px;font-weight500}
+        .container{max-width1000px;margin0 auto 60px;padding0 2rem;columns2;gap1.6rem}
+        .item{break-insideavoid;margin-bottom2.4rem}
+        .card{width100%;height280px;background#333;border-radius18px;margin-bottom12px}
+        .item-title{font-size15px;color#ccc;text-aligncenter}
+
+        @media(max-width768px){.container{columns1}}
+    style
+head
+body
+    nav
+        a href=index.htmlimg src=logo.png class=logo-imga
+        div class=nav-menu
+            a href=ecommerce.html电商a
+            a href=ai.htmlAIa
+            a href=design.html平面a
+        div
+    nav
+
+    h1 class=page-title平面h1
+
+    div class=container
+        div class=itemdiv class=carddivdiv class=item-title标题1divdiv
+        div class=itemdiv class=carddivdiv class=item-title标题2divdiv
+        div class=itemdiv class=carddivdiv class=item-title标题3divdiv
+        div class=itemdiv class=carddivdiv class=item-title标题4divdiv
+        div class=itemdiv class=carddivdiv class=item-title标题5divdiv
+        div class=itemdiv class=carddivdiv class=item-title标题6divdiv
+    div
+body
+html
