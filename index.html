@@ -73,6 +73,8 @@
             align-items: center;
             justify-content: space-between;
             z-index: 100;
+            /* 新增：允许导航栏内容换行（移动端关键） */
+            flex-wrap: wrap;
         }
 
         /* LOGO */
@@ -138,12 +140,31 @@
             font-size: 1rem;
         }
 
-        /* 响应式 */
+        /* 响应式（只修改这里，修复重叠，其他不变） */
         @media (max-width:768px) {
-            nav { padding: 1rem 1.5rem; }
-            .nav-menu { gap:1.2rem; }
+            nav { 
+                padding: 1rem 1.5rem; 
+                /* 保留你原来的padding，只新增修复逻辑 */
+            }
+            /* 核心修复：取消导航菜单绝对定位，避免覆盖LOGO */
+            .nav-menu { 
+                position: static !important; /* 取消绝对定位 */
+                transform: none !important;   /* 取消居中偏移 */
+                width: 100% !important;       /* 占满整行 */
+                justify-content: center !important; /* 自身居中 */
+                margin-top: 1rem !important;  /* 和LOGO拉开距离 */
+                gap:1.2rem; 
+            }
             .nav-menu a { font-size:13px; }
             .banner-text h1 { font-size:2.2rem; }
+            /* 小屏缩小LOGO，避免占空间 */
+            .logo-img { height: 24px !important; }
+        }
+
+        /* 新增：极端窄屏（比如iPhone SE）适配，彻底避免重叠 */
+        @media (max-width:375px) {
+            .nav-menu a { font-size:12px !important; gap: 1rem !important; }
+            .banner-text h1 { font-size: 1.8rem !important; }
         }
     </style>
 </head>
